@@ -1,0 +1,22 @@
+# Bytecode and Python cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+venv/
+.env
+
+# Editor/IDE folders
+.vscode/
+.idea/
+
+# MacOS and system files
+.DS_Store
+
+# Git stuff
+.git
+.gitignore
+
+# Logs, temp
+*.log
