@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - langchain
+    networks:
+      - resume_net
+    volumes:
+      - ./backend:/app
+    env_file:
+      - .env 
+    environment:
+      - LANGCHAIN_API_URL=http://langchain:9000
+
+  langchain:
+    build: ./langchain_service
+    ports:
+      - "9000:9000"
+    networks:
+      - resume_net
+    volumes:
+      - ./langchain_service:/app
+    env_file:
+      - .env
+
+networks:
+  resume_net:

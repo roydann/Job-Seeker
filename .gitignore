@@ -1,0 +1,32 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+venv/
+.env/
+
+# VSCode and IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+
+# Uploaded resumes and other generated data
+backend/uploaded_resumes/
+*.log
+
+# Docker
+**/.env
+docker-compose.override.yml
+
+# Compiled files
+*.egg-info/
+dist/
+build/
+
+# Node (if using React frontend later)
+node_modules/
+.env.local
